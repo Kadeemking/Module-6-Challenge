@@ -1,0 +1,17 @@
+*{
+    margin: 0%;
+}
+
+header{
+    background: linear-gradient(to right, #3841be, #010431);
+}
+
+header h1{
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-left: 25%;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
