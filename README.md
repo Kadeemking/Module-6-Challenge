@@ -1,8 +1,8 @@
-# Weather Dashboard
+# My Weather Dashboard
 
 ## Description
 
-
+I am tasked with creating an app that displays the weather for the city that the user searches for. 
 
 ## Table of Contents
 
