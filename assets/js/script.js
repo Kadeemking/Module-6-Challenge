@@ -1,11 +1,13 @@
 const searchFormEl= document.querySelector("#search-form");
 const cityNameEl= document.querySelector("#city-name");
+const currentWeather= document.querySelector("#current-weather")
 const apiKey= '5d63efeaf14fbd7b0d0c47a5c4a2fb8f';
 
 function searchCity(event){
         event.preventDefault();
         const cityName= cityNameEl.value;
         populateCurrentWeather(cityName);
+        populate5Day(cityName);
 };
 
 function populateCurrentWeather(cityName){
@@ -16,7 +18,12 @@ function populateCurrentWeather(cityName){
             return response.json();
         })
         .then(function(data){
+            currentWeather.innerHTML=`<h3 id="city">${data.name} (9/17/2024) <img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""></h3>
+                    <p>Temperature: <span id="temperature"></span></p>
+                    <p>Wind: <span id="wind"></span></p>
+                    <p>Humidity: <span id="humidity"></span></p>`,
             console.log(data)
+
         });
 }
 
