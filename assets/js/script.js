@@ -18,12 +18,11 @@ function populateCurrentWeather(cityName){
             return response.json();
         })
         .then(function(data){
-            currentWeather.innerHTML=`<h3 id="city">${data.name} (9/17/2024) <img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""></h3>
-                    <p>Temperature: <span id="temperature"></span></p>
-                    <p>Wind: <span id="wind"></span></p>
-                    <p>Humidity: <span id="humidity"></span></p>`,
+            currentWeather.innerHTML=`<h3>${data.name} (${dayjs.unix(data.dt).format("MM/DD/YYYY")}) <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt=""></h3>
+                    <p>Temperature: ${data.main.temp} °F<span id="temperature"></span></p>
+                    <p>Wind: ${data.wind.speed} MPH<span id="wind"></span></p>
+                    <p>Humidity: ${data.main.humidity} %<span id="humidity"></span></p>`,
             console.log(data)
-
         });
 }
 
