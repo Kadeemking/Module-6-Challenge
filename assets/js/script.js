@@ -3,12 +3,16 @@ const cityNameEl= document.querySelector("#city-name");
 const currentWeatherEl= document.querySelector("#current-weather")
 const fiveDayEl=document.querySelector("#five-day")
 const apiKey= '5d63efeaf14fbd7b0d0c47a5c4a2fb8f';
+const searchList= document.querySelector("#search-history")
+const searchHistory= [];
 
 function searchCity(event){
         event.preventDefault();
         const cityName= cityNameEl.value;
         populateCurrentWeather(cityName);
         populate5Day(cityName);
+        storeHistory(cityName);
+        renderHistory();
 };
 
 function populateCurrentWeather(cityName){
@@ -57,5 +61,34 @@ function populate5Day(cityName){
         });
 }
 
-searchFormEl.addEventListener("submit", searchCity);
+function renderHistory() {
+    searchList.innerHTML = "";
+    searchHistory.forEach(history => {
+        const button = document.createElement("button");
+        button.textContent = history;
+        button.classList.add("btn", "btn-secondary", "w-100", "my-2");
+        button.addEventListener("click", () => {
+            populateCurrentWeather(history);
+            populate5Day(history);
+        });
+        searchList.appendChild(button);
+    });
+}
 
+function loadCities() {
+    const storedCities = JSON.parse(localStorage.getItem('searchHistory'));
+    if (storedCities !== null) {
+        searchHistory = storedCities;
+    }
+    renderHistory();
+}
+
+function storeHistory(cityName) {
+    if (!searchHistory.includes(cityName)) {
+        searchHistory.push(cityName);
+        localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+    }
+}
+
+searchFormEl.addEventListener("submit", searchCity);
+loadCities();
