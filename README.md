@@ -2,7 +2,7 @@
 
 ## Description
 
-I am tasked with creating an app that displays the weather for the city that the user searches for. 
+I am tasked with creating an app that displays the weather for the city that the user searches for. I was able to use the open weather api and apply it to a function in order to recieve the latest weather status as well as the 5 day future forecast. Withthis project I developed a better understanding on how to utilize APIs in my code. 
 
 ## Table of Contents
 
@@ -23,7 +23,9 @@ I am tasked with creating an app that displays the weather for the city that the
 
 <a href="https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba">License for README</a>
 
+<a href="https://openweathermap.org/api">Open Weather API</a>
 
+<a href="https://getbootstrap.com/">Bootstrap Library</a>
 
 ## License
 
