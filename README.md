@@ -2,7 +2,7 @@
 
 ## Description
 
-I am tasked with creating an app that displays the weather for the city that the user searches for. I was able to use the open weather api and apply it to a function in order to recieve the latest weather status as well as the 5 day future forecast. Withthis project I developed a better understanding on how to utilize APIs in my code. 
+I am tasked with creating a website that displays the weather of a city that the user searches for. I was able to use the open weather API and apply it to functions in order to receive the latest weather status as well as the 5 day future forecast. With this project I developed a better understanding on how to utilize APIs in my code, how to save and retrieve data stored in local storage, and how to use Bootstrap. 
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@ I am tasked with creating an app that displays the weather for the city that the
 
 <a href="https://kadeemking.github.io/Module-6-Challenge/">Live Page</a>
 
-![alt text](assets/images/screenshot1.png)
+![alt text](assets/photos/screenshot6.png)
 
 ## Credits
 
