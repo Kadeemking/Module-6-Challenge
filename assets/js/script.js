@@ -4,7 +4,7 @@ const currentWeatherEl= document.querySelector("#current-weather")
 const fiveDayEl=document.querySelector("#five-day")
 const apiKey= '5d63efeaf14fbd7b0d0c47a5c4a2fb8f';
 const searchList= document.querySelector("#search-history")
-const searchHistory= [];
+let searchHistory= [];
 
 function searchCity(event){
         event.preventDefault();
